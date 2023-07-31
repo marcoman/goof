@@ -18,7 +18,7 @@ phases:
             - docker build -t $ECR_REPO/log4shell-server:latest todolist/exploits/log4shell-server
 
     post_build: 
-        commands:0
+        commands:
             - echo Build completed on `date`
             - echo Pushing the Docker image
             - docker push $ECR_REPO/thumbnailer:latest
